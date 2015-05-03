@@ -1,0 +1,168 @@
+@import "colors";
+@import "typography";
+@import "grid";
+@import "buttons";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.logo {
+  background: url("/images/logo.svg") center center no-repeat;
+  background-size: 400px;
+  height: 120px;
+  text-indent: -9999px;
+}
+
+.center {
+  text-align: center;
+}
+
+.site-header,
+.mega-header {
+  background:
+    linear-gradient(
+      to top,
+      rgba($orange, 0.3)    0,
+      rgba($orange, 0.3)    4px,
+      white                 4px,
+      white                 6px,
+      rgba($orange, 0.5)    6px,
+      rgba($orange, 0.5)   16px,
+      white                16px,
+      white                19px,
+      rgba($orange, 0.7)   18px,
+      rgba($orange, 0.7)   40px,
+      white                40px,
+      white                43px,
+      $orange              43px,
+      $orange
+    );
+  padding: 80px 20px;
+  position: relative;
+  color: white;
+  text-align: center;
+  margin: 0 0 30px 0;
+}
+
+.menu-toggle {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  border: 0;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  background: #C34B1B;
+  color: white;
+  text-transform: uppercase;
+  border-radius: 50%;
+}
+.menu-screen {
+  display: none;
+}
+
+.wrap {
+  max-width: 900px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.page-wrap {
+
+}
+
+img {
+  max-width: 100%;
+}
+
+.main {
+  width: 66.66%;
+  float: left;
+}
+
+.sidebar {
+  width: 33.33%;
+  float: right;
+  padding-left: 30px;
+  .module {
+    font-size: 85%;
+  }
+}
+
+.by {
+  margin: 0;
+  color: #ccc;
+  padding-left: 10px;
+}
+
+.schedule {
+  background: $darkgray;
+  color: white;
+  padding: 15px;
+  h5 {
+    font-size: 110%;
+    margin: 0 0 0.5rem 0;
+  }
+  table {
+    margin: 0 0 1rem 0;
+  }
+  p {
+    text-align: center;
+  }
+}
+
+.section {
+  margin-bottom: 50px;
+}
+
+.module {
+  margin-bottom: 50px;
+}
+
+.about {
+  font-size: 125%;
+}
+
+.things-to-know-list {
+  background: $darkgray;
+  padding: 40px 60px;
+  font-size: 150%;
+  color: white;
+  li {
+    margin: 0 0 20px 0;
+    &:last-child {
+      margin: 0;
+    }
+  }
+}
+
+.mega-title {
+  font-size: 5.5rem;
+  span {
+    text-transform: uppercase;
+    border-bottom: 10px solid white;
+  }
+  margin: 0 0 2rem 0;
+}
+
+.help-grid {
+  .module {
+    padding-right: 20px;
+  }
+}
+
+.contact-form {
+  background: #D8D8D8;
+  padding: 40px;
+}
+
+.site-footer {
+  background: $orange url(/images/footer.jpg);
+  background-size: cover;
+  height: 800px;
+  color: white;
+  margin-top: 100px;
+}
