@@ -1,3 +1,5 @@
+$breakpoint: "(max-width: 600px)";
+
 @import "colors";
 @import "typography";
 @import "grid";
@@ -10,10 +12,13 @@
 }
 
 .logo {
-  background: url("/images/logo.svg") center center no-repeat;
+  background: url("../images/logo.svg") center center no-repeat;
   background-size: 400px;
   height: 120px;
   text-indent: -9999px;
+  @media #{$breakpoint} {
+    background-size: 250px;
+  }
 }
 
 .center {
@@ -45,6 +50,10 @@
   color: white;
   text-align: center;
   margin: 0 0 30px 0;
+  a {
+    color: inherit;
+    border-bottom: 1px dotted;
+  }
 }
 
 .menu-toggle {
@@ -62,6 +71,23 @@
 }
 .menu-screen {
   display: none;
+  background: $darkgray;
+  padding: 20px 5px;
+  &.open {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+  li {
+    margin: 10px 0;
+  }
+  .close {
+    margin-top: 60px;
+  }
 }
 
 .wrap {
@@ -82,7 +108,6 @@ img {
   width: 66.66%;
   float: left;
 }
-
 .sidebar {
   width: 33.33%;
   float: right;
@@ -91,6 +116,15 @@ img {
     font-size: 85%;
   }
 }
+@media #{$breakpoint} {
+  .main,
+  .sidebar {
+    width: 100%;
+    float: none;
+    padding: 10px;
+  }
+}
+
 
 .by {
   margin: 0;
@@ -103,11 +137,19 @@ img {
   color: white;
   padding: 15px;
   h5 {
-    font-size: 110%;
+    font-size: 120%;
     margin: 0 0 0.5rem 0;
+    text-align: center;
+    background: $orange;
+    padding: 10px 15px;
+    margin: -15px -15px 10px -15px;
   }
-  table {
+  .hours {
     margin: 0 0 1rem 0;
+    width: 100%;
+    td:nth-child(2) {
+      text-align: right;
+    }
   }
   p {
     text-align: center;
@@ -141,11 +183,14 @@ img {
 
 .mega-title {
   font-size: 5.5rem;
+  margin: 0 0 2rem 0;
   span {
     text-transform: uppercase;
     border-bottom: 10px solid white;
   }
-  margin: 0 0 2rem 0;
+  @media #{$breakpoint} {
+    font-size: 3.2rem;
+  }
 }
 
 .help-grid {
@@ -157,10 +202,13 @@ img {
 .contact-form {
   background: #D8D8D8;
   padding: 40px;
+  @media #{$breakpoint} {
+    padding: 5px;
+  }
 }
 
 .site-footer {
-  background: $orange url(/images/footer.jpg);
+  background: $orange url(../images/footer.jpg) center center;
   background-size: cover;
   height: 800px;
   color: white;

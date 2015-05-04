@@ -21,18 +21,19 @@
     <div class="wrap">
       <h1 class="logo">YWeb Career Academy</h1>
 
-      <p class="intro">A web design and development training program in Madison, Wisconsin for women and people of color.</p>
+      <p class="intro">A web design and development training program in Madison, Wisconsin for women and people of color. A part of <a href="http://www.ywcamadison.org/">YWCA Madison</a>.</p>
     </div>
 
     <nav>
 
       <button id="menu-toggle" class="menu-toggle">Menu</button>
 
-      <ul class="menu-screen">
-        <li><a href="#">About YWebCA</a></li>
-        <li><a href="#">How Classes Work</a></li>
-        <li><a href="#">Apply for Summer '15</a></li>
-        <li><a href="#">How to Help</a></li>
+      <ul class="menu-screen" id="menu-screen">
+        <li><a href="#about">About YWebCA</a></li>
+        <li><a href="#classes">How Classes Work</a></li>
+        <li><a href="https://chriscoyier.wufoo.com/forms/apply-for-yweb-career-academy-summer-15/">Apply for Summer '15</a></li>
+        <li><a href="#help">How to Help</a></li>
+        <li class="close"><a href="#0">Close</a></li>
       </ul>
 
     </nav>
@@ -43,7 +44,7 @@
 
     <main class="main">
 
-      <section class="section about">
+      <section class="section about" id="about">
 
         <h2>About</h2>
 
@@ -51,7 +52,7 @@
 
       </section>
 
-      <section class="section classes">
+      <section class="section classes" id="classes">
 
         <h2>How The Classes Work</h2>
 
@@ -91,7 +92,7 @@
         <div class="module photo">
 
           <figure>
-            <img src="/images/francisco.jpg" alt="">
+            <img src="images/francisco.jpg" alt="">
             <figcaption>Student Francisco Valdes-Jasso talks with instructor Annalise Haynes,</figcaption>
           </figure>
 
@@ -105,7 +106,7 @@
 
             <h5>Oct 27 - May 14, 2015</h5>
 
-            <table>
+            <table class="hours">
               <tr>
                 <td>Monday</td>
                 <td>5pm - 9pm</td>
@@ -124,9 +125,9 @@
               </tr>
             </table>
 
-            <p>This cohort is currently full, but you can...</p>
+            <p>This cohort is currently full, but you&nbsp;can...</p>
 
-            <a href="#" class="button button-full-width">
+            <a href="https://chriscoyier.wufoo.com/forms/apply-for-yweb-career-academy-summer-15/" class="button button-full-width">
               Apply for Summer
             </a>
 
@@ -138,12 +139,14 @@
 
           <h3>Course Material</h3>
 
-          <p>All the exercises for the class are publicly available on GitHub.</p>
+          <p>The <a href="https://github.com/YWebCA/YWebCA/wiki/Curriculum">curriculum</a> for the class is publicly available in our <a href="https://github.com/YWebCA/">GitHub Org</a>.
 
-          <p>We use the book <a href="http://eloquentjavascript.net/">Eloquent JavaScript</a> to guide the portions of the class that focus on JavaScript.</p>
+          <p>We use the book <a href="http://eloquentjavascript.net/">Eloquent JavaScript</a> to guide the portions of the class that focus on JavaScript and use <a href="https://github.com/YWebCA/EloquentYWeb">our own exercises</a> to go along with it.</p>
 
           <div class="grid bottom">
-            <img src="/images/book.jpg" alt="" class="half">
+            <div>
+              <img src="images/book.jpg" alt="" class="half">
+            </div>
             <p class="half by">By Marijn Haverbeke</p>
           </div>
 
@@ -152,7 +155,7 @@
         <div class="module">
 
           <figure>
-            <img src="/images/deep-thought.jpg" alt="">
+            <img src="images/deep-thought.jpg" alt="">
             <figcaption>Deep in thought.</figcaption>
           </figure>
 
@@ -162,7 +165,7 @@
 
   </div> <!-- wrap -->
 
-  <header class="mega-header">
+  <header class="mega-header" id="help">
 
     <div class="wrap">
       <h1 class="mega-title">
@@ -181,26 +184,25 @@
 
       <div class="module">
         <h2>Come and Speak</h2>
-        <img src="/images/come-speak.jpg" alt="">
+        <img src="images/come-speak.jpg" alt="">
         <p>We welcome any and all guests to speak to our class on a variety of topics. This is a wonderful opportunity to introduce our students to the broad array of available technology careers.</p>
       </div>
 
       <div class="module">
         <h2>Be a Mentor</h2>
-        <img src="/images/mentor.jpg" alt="">
+        <img src="images/mentor.jpg" alt="">
         <p>These professionals will be paired with one to two students to provide out-of-class mentorship and networking opportunities.</p>
       </div>
 
       <div class="module">
         <h2>Be an in-class Volunteer</h2>
-        <img src="/images/volunteer.jpg" alt="">
-        <p>We are always in need of volunteers to be available in class to work one-on-one with students to work through concepts and debug projects.
-</p>
+        <img src="images/volunteer.jpg" alt="">
+        <p>We are always in need of volunteers to be available in class to work one-on-one with students to work through concepts and debug projects.</p>
       </div>
 
       <div class="module">
         <h2>Give a Site Tour</h2>
-        <img src="/images/site-tour.jpg" alt="">
+        <img src="images/site-tour.jpg" alt="">
         <p>We believe that the best way to introduce our students to the culture of the tech industry is to see where the work gets done. We'd love to visit your site.</p>
       </div>
 
@@ -216,26 +218,57 @@
       </h4>
     </div>
 
-   <div class="contact-form">
+    <div class="contact-form">
       <div id="wufoo-z11ea6i00xfo2v9">
-     Fill out my <a href="https://chriscoyier.wufoo.com/forms/z11ea6i00xfo2v9">online form</a>.
-     </div>
-     <script type="text/javascript">var z11ea6i00xfo2v9;(function(d, t) {
-     var s = d.createElement(t), options = {
-     'userName':'chriscoyier',
-     'formHash':'z11ea6i00xfo2v9',
-     'autoResize':true,
-     'height':'597',
-     'async':true,
-     'host':'wufoo.com',
-     'header':'show',
-     'ssl':true};
-     s.src = ('https:' == d.location.protocol ? 'https://' : 'http://') + 'www.wufoo.com/scripts/embed/form.js';
-     s.onload = s.onreadystatechange = function() {
-     var rs = this.readyState; if (rs) if (rs != 'complete') if (rs != 'loaded') return;
-     try { z11ea6i00xfo2v9 = new WufooForm();z11ea6i00xfo2v9.initialize(options);z11ea6i00xfo2v9.display(); } catch (e) {}};
-     var scr = d.getElementsByTagName(t)[0], par = scr.parentNode; par.insertBefore(s, scr);
-     })(document, 'script');</script>
+         Fill out my <a href="https://chriscoyier.wufoo.com/forms/z11ea6i00xfo2v9">online form</a>.
+      </div>
+      <script>
+        var z11ea6i00xfo2v9;(function(d, t) {
+        var s = d.createElement(t), options = {
+        'userName':'chriscoyier',
+        'formHash':'z11ea6i00xfo2v9',
+        'autoResize':true,
+        'height':'597',
+        'async':true,
+        'host':'wufoo.com',
+        'header':'hide',
+        'ssl':true};
+        s.src = ('https:' == d.location.protocol ? 'https://' : 'http://') + 'www.wufoo.com/scripts/embed/form.js';
+        s.onload = s.onreadystatechange = function() {
+        var rs = this.readyState; if (rs) if (rs != 'complete') if (rs != 'loaded') return;
+        try { z11ea6i00xfo2v9 = new WufooForm();z11ea6i00xfo2v9.initialize(options);z11ea6i00xfo2v9.display(); } catch (e) {}};
+        var scr = d.getElementsByTagName(t)[0], par = scr.parentNode; par.insertBefore(s, scr);
+        })(document, 'script');
+      </script>
+   </div>
+
+   <div class="center">
+      <h4 class="arrow-header">
+        Donate to YWebCA
+      </h4>
+    </div>
+
+   <div class="contact-form">
+     <div id="wufoo-z1cf6x571jwis4p">
+      Fill out my <a href="https://chriscoyier.wufoo.com/forms/z1cf6x571jwis4p">online form</a>.
+      </div>
+      <script type="text/javascript">var z1cf6x571jwis4p;(function(d, t) {
+      var s = d.createElement(t), options = {
+      'userName':'chriscoyier',
+      'formHash':'z1cf6x571jwis4p',
+      'autoResize':true,
+      'height':'420',
+      'async':true,
+      'host':'wufoo.com',
+      'header':'hide',
+      'ssl':true};
+      s.src = ('https:' == d.location.protocol ? 'https://' : 'http://') + 'www.wufoo.com/scripts/embed/form.js';
+      s.onload = s.onreadystatechange = function() {
+      var rs = this.readyState; if (rs) if (rs != 'complete') if (rs != 'loaded') return;
+      try { z1cf6x571jwis4p = new WufooForm();z1cf6x571jwis4p.initialize(options);z1cf6x571jwis4p.display(); } catch (e) {}};
+      var scr = d.getElementsByTagName(t)[0], par = scr.parentNode; par.insertBefore(s, scr);
+      })(document, 'script');</script>
+
    </div>
 
   </div>
@@ -249,6 +282,8 @@
     </div>
 
   </footer>
+
+  <script src="js/min/site-min.js"></script>
 
 </body>
 

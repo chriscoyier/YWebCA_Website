@@ -24,6 +24,11 @@ p {
 a {
   text-decoration: none;
   color: $blue;
+  border-bottom: 1px solid lighten($blue, 30%);
+  &:hover,
+  &:focus {
+    border-bottom-color: darken($blue, 10%);
+  }
 }
 
 figure {
@@ -38,6 +43,9 @@ figure {
 .intro {
   font-weight: bold;
   font-size: 125%;
+  @media #{$breakpoint} {
+    font-size: 110%;
+  }
 }
 
 .big-note {

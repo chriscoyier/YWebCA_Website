@@ -4,9 +4,16 @@
   .module,
   .half {
     flex-basis: 50%;
+
   }
   &.bottom {
     align-items: flex-end;
   }
+  @media #{$breakpoint} {
+    padding: 10px;
+    .module,
+    .half {
+      flex-basis: 100%;
+    }
+  }
 }
-
