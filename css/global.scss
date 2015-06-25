@@ -4,6 +4,8 @@ $breakpoint: "(max-width: 600px)";
 @import "typography";
 @import "grid";
 @import "buttons";
+@import "nav";
+@import "footer";
 
 * {
   box-sizing: border-box;
@@ -53,40 +55,10 @@ $breakpoint: "(max-width: 600px)";
   a {
     color: inherit;
     border-bottom: 1px dotted;
-  }
-}
-
-.menu-toggle {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  border: 0;
-  width: 60px;
-  height: 60px;
-  text-align: center;
-  background: #C34B1B;
-  color: white;
-  text-transform: uppercase;
-  border-radius: 50%;
-}
-.menu-screen {
-  display: none;
-  background: $darkgray;
-  padding: 20px 5px;
-  &.open {
-    display: block;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-  }
-  li {
-    margin: 10px 0;
-  }
-  .close {
-    margin-top: 60px;
+    &:hover,
+    &:active {
+      border-bottom-style: solid;
+    }
   }
 }
 
@@ -94,10 +66,6 @@ $breakpoint: "(max-width: 600px)";
   max-width: 900px;
   margin: 0 auto;
   overflow: hidden;
-}
-
-.page-wrap {
-
 }
 
 img {
@@ -124,7 +92,6 @@ img {
     padding: 10px;
   }
 }
-
 
 .by {
   margin: 0;
@@ -168,11 +135,25 @@ img {
   font-size: 125%;
 }
 
+.things {
+  padding-right: 20px;
+}
+.candidate {
+  padding-left: 20px;
+}
+@media #{$breakpoint} {
+  .things,
+  .candidate {
+    padding: 0;
+  }
+}
+
 .things-to-know-list {
   background: $darkgray;
-  padding: 40px 60px;
-  font-size: 150%;
+  padding: 25px 40px 35px;
+
   color: white;
+  margin-bottom: 20px;
   li {
     margin: 0 0 20px 0;
     &:last-child {
@@ -180,9 +161,16 @@ img {
     }
   }
 }
+.candidate-list {
+  font-size: 125%;
+  strong {
+    color: $orange;
+  }
+}
 
 .mega-title {
-  font-size: 5.5rem;
+  color: white;
+  font-size: 5.4rem;
   margin: 0 0 2rem 0;
   span {
     text-transform: uppercase;
@@ -200,17 +188,9 @@ img {
 }
 
 .contact-form {
-  background: #D8D8D8;
   padding: 40px;
+  border: 30px solid #eee;
   @media #{$breakpoint} {
     padding: 5px;
   }
-}
-
-.site-footer {
-  background: $orange url(../images/footer.jpg) center center;
-  background-size: cover;
-  height: 800px;
-  color: white;
-  margin-top: 100px;
 }
